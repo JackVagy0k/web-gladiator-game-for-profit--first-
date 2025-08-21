@@ -12,9 +12,9 @@ class AdManager {
                 }
             },
             unity: {
-                initialized: false,
-                gameId: 'XXXXXXX', // Replace with Unity Game ID
-                testMode: true // Set to false for production
+                initialized: true,
+                gameId: '5929635', // Replace with Unity Game ID
+                testMode: false // Set to false for production
             }
         };
         
