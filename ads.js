@@ -19,8 +19,8 @@ class AdManager {
         };
         
         this.adState = {
-            bannerVisible: false,
-            interstitialReady: false,
+            bannerVisible: true,
+            interstitialReady: true,
             rewardedReady: false,
             lastInterstitial: 0,
             adBlockDetected: false
