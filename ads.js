@@ -4,7 +4,7 @@ class AdManager {
         this.adNetworks = {
             adsense: {
                 initialized: false,
-                clientId: 'ca-pub-XXXXXXXXXXXXXXXXX', // Replace with your AdSense ID
+                clientId: 'ca-pub-3024149626246427', // Replace with your AdSense ID
                 slots: {
                     banner: 'XXXXXXXXXX',
                     interstitial: 'XXXXXXXXXX',
