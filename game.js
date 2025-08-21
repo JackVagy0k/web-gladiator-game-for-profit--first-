@@ -75,8 +75,8 @@ class IdleGladiatorGame {
         this.startGameLoop();
         this.checkOfflineEarnings();
         
-        // Auto-save every 30 seconds
-        setInterval(() => this.saveGame(), 30000);
+        // Auto-save every 1 seconds
+        setInterval(() => this.saveGame(), 1000);
         
         // Update ad boost timers
         setInterval(() => this.updateAdBoosts(), 1000);
