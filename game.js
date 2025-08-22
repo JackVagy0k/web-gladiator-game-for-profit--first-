@@ -114,7 +114,7 @@ class IdleGladiatorGame {
             card.innerHTML = `
                 <div style="display:flex; align-items:center; min-height:80px;">
                     <div style="flex:0 0 64px; margin-right:10px;"> 
-                        <img src="${gladiator.image}" alt="${gladiator.name}" class="gladiator-image">
+                        <img src="${gladiator.image}" alt="${gladiator.name}" class="gladiator-image" style="width:200px; height:200px;>
                     </div>
                     <div style="
                         flex:1;
