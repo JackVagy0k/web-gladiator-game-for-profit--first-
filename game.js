@@ -36,7 +36,7 @@ class IdleGladiatorGame {
                 baseHealth: 60,
                 baseSpeed: 12,
                 cost: 500,
-                image: "images/rouge.png",
+                image: "images/rogue.png",
                 description: "Fast attacker with low defense"
             },
             mage: {
