@@ -210,8 +210,8 @@ class IdleGladiatorGame {
                     <div class="upgrade-name">${upgrade.name} (Level ${level})</div>
                     <div class="upgrade-cost">Cost: ${this.formatNumber(cost)} coins</div>
                 </div>
-                <button class="upgrade-btn" ${!this.upgradeTypes.canAfford ? 'disabled' : ''}>
-                    ${this.upgradeTypes.canAfford ? 'UPGRADE' : 'TOO EXPENSIVE'}
+                <button class="upgrade-btn" ${!upgrade.canAfford ? 'disabled' : ''}>
+                    ${upgrade.canAfford ? 'UPGRADE' : 'TOO EXPENSIVE'}
                 </button>
             `;
 
