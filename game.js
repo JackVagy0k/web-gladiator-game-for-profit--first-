@@ -36,7 +36,7 @@ class IdleGladiatorGame {
                 baseHealth: 60,
                 baseSpeed: 12,
                 cost: 500,
-                image: "images/warrior.png",
+                image: "images/rouge.png",
                 description: "Fast attacker with low defense"
             },
             mage: {
@@ -46,7 +46,7 @@ class IdleGladiatorGame {
                 baseHealth: 40,
                 baseSpeed: 8,
                 cost: 1000,
-                image: "images/warrior.png",
+                image: "images/mage.png",
                 description: "High damage but very fragile"
             },
             berserker: {
@@ -56,7 +56,7 @@ class IdleGladiatorGame {
                 baseHealth: 80,
                 baseSpeed: 15,
                 cost: 2000,
-                image: "images/warrior.png",
+                image: "images/berserker2.png",
                 description: "Devastating attacks with no defense"
             }
         };
