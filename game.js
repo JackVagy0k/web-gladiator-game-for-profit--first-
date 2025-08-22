@@ -112,17 +112,41 @@ class IdleGladiatorGame {
             const card = document.createElement('div');
             card.className = `gladiator-card ${this.gameData.selectedGladiator === type ? 'selected' : ''}`;
             card.innerHTML = `
-                <img src="${gladiator.image}" alt="${gladiator.name}" class="gladiator-image" style="width:80px; height:80px; object-fit:contain; border-radius:8px 0 0 8px; margin-right:12px; background:none; box-shadow:none;">
-                <h3>${gladiator.name}</h3>
-                <div class="stats">
-                    <div>⚔️ Attack: ${gladiator.baseAttack}</div>
-                    <div>🛡️ Defense: ${gladiator.baseDefense}</div>
-                    <div>❤️ Health: ${gladiator.baseHealth}</div>
-                    <div>⚡ Speed: ${gladiator.baseSpeed}</div>
-                    <div style="margin-top: 5px; font-style: italic;">${gladiator.description}</div>
-                    ${!owned ? `<div style="margin-top: 8px; color: #8B0000; font-weight: bold;">
-                        Cost: ${gladiator.cost} coins ${canAfford ? '✅' : '❌'}
-                    </div>` : ''}
+                <div style="position:relative; min-height:80px; display:flex; align-items:center;">
+                    <img src="${gladiator.image}" alt="${gladiator.name}" 
+                        class="gladiator-image"
+                        style="
+                            position:absolute;
+                            left:0; top:0; bottom:0;
+                            width:80px; height:80px; 
+                            object-fit:contain;
+                            border-radius:8px;
+                            z-index:1;
+                            background:none;
+                            box-shadow:none;
+                            pointer-events:none;
+                            opacity:0.85;
+                        ">
+                    <div style="
+                        position:relative;
+                        margin-left:20px;
+                        padding-left:70px;
+                        z-index:2;
+                        color:#fff;
+                        text-shadow: 1px 1px 4px #000, 0 0 8px #000;
+                    ">
+                        <h3 style="margin:0;">${gladiator.name}</h3>
+                        <div class="stats">
+                            <div>⚔️ Attack: ${gladiator.baseAttack}</div>
+                            <div>🛡️ Defense: ${gladiator.baseDefense}</div>
+                            <div>❤️ Health: ${gladiator.baseHealth}</div>
+                            <div>⚡ Speed: ${gladiator.baseSpeed}</div>
+                            <div style="margin-top: 5px; font-style: italic;">${gladiator.description}</div>
+                            ${!owned ? `<div style="margin-top: 8px; color: #8B0000; font-weight: bold;">
+                                Cost: ${gladiator.cost} coins ${canAfford ? '✅' : '❌'}
+                            </div>` : ''}
+                        </div>
+                    </div>
                 </div>
             `;
 
