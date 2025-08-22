@@ -112,7 +112,7 @@ class IdleGladiatorGame {
             const card = document.createElement('div');
             card.className = `gladiator-card ${this.gameData.selectedGladiator === type ? 'selected' : ''}`;
             card.innerHTML = `
-                <img src="${gladiator.image}" alt="${gladiator.name}" class="gladiator-image" style="width:100%;height:auto;max-height:120px;object-fit:contain; background:#222; border-radius:8px 8px 0 0;">
+                <img src="${gladiator.image}" alt="${gladiator.name}" class="gladiator-image" style="width:80px; height:80px; object-fit:contain; border-radius:8px 0 0 8px; margin-right:12px; background:none; box-shadow:none;">
                 <h3>${gladiator.name}</h3>
                 <div class="stats">
                     <div>⚔️ Attack: ${gladiator.baseAttack}</div>
