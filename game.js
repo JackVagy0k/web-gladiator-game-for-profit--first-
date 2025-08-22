@@ -20,7 +20,7 @@ class IdleGladiatorGame {
 
         this.gladiatorTypes = {
             warrior: {
-                name: "🛡️ Warriorr",
+                name: "🛡️ Warrior",
                 baseAttack: 10,
                 baseDefense: 8,
                 baseHealth: 100,
@@ -195,12 +195,8 @@ class IdleGladiatorGame {
 
             if (this.gameData.coins >= cost) {
                 upgrade.canAfford = true;
-                console.log("van pénzed");
-                console.log(upgrade.canAfford);
             } else {
                 upgrade.canAfford = false;
-                console.log("nincs pénzed");
-                console.log(upgrade.canAfford);
             }
 
             const item = document.createElement('div');
@@ -392,7 +388,6 @@ class IdleGladiatorGame {
         gladiatorStats.health = gladiatorStats.maxHealth;
         
         this.createUpgradeButtons();
-        console.log("meghalt az enemy");
         this.spawnEnemy();
         this.updateGladiatorDisplay();
     }
