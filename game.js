@@ -2,6 +2,7 @@ class IdleGladiatorGame {
     constructor() {
         this.gameData = {
             coins: 100,
+            canAfford: false,
             gems: 5,
             level: 1,
             selectedGladiator: null,
@@ -192,7 +193,6 @@ class IdleGladiatorGame {
             const upgrade = this.upgradeTypes[type];
             const level = this.gameData.upgrades[type] || 0;
             const cost = Math.floor(upgrade.baseCost * Math.pow(upgrade.multiplier, level));
-            const canAfford = this.gameData.coins >= cost;
 
             const item = document.createElement('div');
             item.className = 'upgrade-item';
@@ -201,8 +201,8 @@ class IdleGladiatorGame {
                     <div class="upgrade-name">${upgrade.name} (Level ${level})</div>
                     <div class="upgrade-cost">Cost: ${this.formatNumber(cost)} coins</div>
                 </div>
-                <button class="upgrade-btn" ${!canAfford ? 'disabled' : ''}>
-                    ${canAfford ? 'UPGRADE' : 'TOO EXPENSIVE'}
+                <button class="upgrade-btn" ${!this.gameData.canAfford ? 'disabled' : ''}>
+                    ${this.gameData.canAfford ? 'UPGRADE' : 'TOO EXPENSIVE'}
                 </button>
             `;
 
@@ -381,8 +381,21 @@ class IdleGladiatorGame {
         const gladiatorStats = this.getGladiatorStats(this.gameData.selectedGladiator);
         gladiatorStats.health = gladiatorStats.maxHealth;
         
+        this.CoinCheck();
         this.spawnEnemy();
         this.updateGladiatorDisplay();
+    }
+
+    CoinCheck() {
+        const upgrade = this.upgradeTypes[type];
+        const level = this.gameData.upgrades[type] || 0;
+        const cost = Math.floor(upgrade.baseCost * Math.pow(upgrade.multiplier, level));
+
+        if (this.gameData.coins >= cost) {
+            this.gameData.canAfford = true;
+        } else {
+            this.gameData.canAfford = false;
+        }
     }
 
     gladiatorDefeated() {
