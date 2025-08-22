@@ -26,6 +26,7 @@ class IdleGladiatorGame {
                 baseHealth: 100,
                 baseSpeed: 5,
                 cost: 0,
+                image: "images/warrior.png",
                 description: "Balanced fighter with strong defense"
             },
             rogue: {
@@ -35,6 +36,7 @@ class IdleGladiatorGame {
                 baseHealth: 60,
                 baseSpeed: 12,
                 cost: 500,
+                image: "images/warrior.png",
                 description: "Fast attacker with low defense"
             },
             mage: {
@@ -44,6 +46,7 @@ class IdleGladiatorGame {
                 baseHealth: 40,
                 baseSpeed: 8,
                 cost: 1000,
+                image: "images/warrior.png",
                 description: "High damage but very fragile"
             },
             berserker: {
@@ -53,6 +56,7 @@ class IdleGladiatorGame {
                 baseHealth: 80,
                 baseSpeed: 15,
                 cost: 2000,
+                image: "images/warrior.png",
                 description: "Devastating attacks with no defense"
             }
         };
@@ -108,6 +112,7 @@ class IdleGladiatorGame {
             const card = document.createElement('div');
             card.className = `gladiator-card ${this.gameData.selectedGladiator === type ? 'selected' : ''}`;
             card.innerHTML = `
+                <img src="${gladiator.image}" alt="${gladiator.name}" class="gladiator-image" style="width:100%;height:auto;max-height:120px;object-fit:contain; background:#222; border-radius:8px 8px 0 0;">
                 <h3>${gladiator.name}</h3>
                 <div class="stats">
                     <div>⚔️ Attack: ${gladiator.baseAttack}</div>
