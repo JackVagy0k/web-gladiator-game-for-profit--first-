@@ -20,7 +20,7 @@ class IdleGladiatorGame {
 
         this.gladiatorTypes = {
             warrior: {
-                name: "🛡️ Warrior",
+                name: "🛡️ Warriorr",
                 baseAttack: 10,
                 baseDefense: 8,
                 baseHealth: 100,
@@ -194,9 +194,9 @@ class IdleGladiatorGame {
             const cost = Math.floor(upgrade.baseCost * Math.pow(upgrade.multiplier, level));
 
             if (this.gameData.coins >= cost) {
-                this.upgradeTypes.canAfford = true;
+                upgrade.canAfford = true;
             } else {
-                this.upgradeTypes.canAfford = false;
+                upgrade.canAfford = false;
             }
 
             const item = document.createElement('div');
