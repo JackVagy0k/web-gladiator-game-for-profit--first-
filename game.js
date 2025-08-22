@@ -56,7 +56,7 @@ class IdleGladiatorGame {
                 baseHealth: 80,
                 baseSpeed: 15,
                 cost: 2000,
-                image: "images/berserker2.png",
+                image: "images/berserker.png",
                 description: "Devastating attacks with no defense"
             }
         };
