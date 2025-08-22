@@ -113,7 +113,8 @@ class IdleGladiatorGame {
             card.className = `gladiator-card ${this.gameData.selectedGladiator === type ? 'selected' : ''}`;
             card.innerHTML = `
                 <div style="display:flex; align-items:center; min-height:80px;">
-                    <img src="${gladiator.image}" alt="${gladiator.name}" 
+                    <div> 
+                        <img src="${gladiator.image}" alt="${gladiator.name}" 
                         class="gladiator-image"
                         style="
                             width:80px; height:80px; 
@@ -126,6 +127,7 @@ class IdleGladiatorGame {
                             opacity:0.85;
                             margin-right:10px;
                         ">
+                    </div>
                     <div style="
                         flex:1;
                         color:#fff;
