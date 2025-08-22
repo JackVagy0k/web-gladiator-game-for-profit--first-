@@ -112,18 +112,19 @@ class IdleGladiatorGame {
             const card = document.createElement('div');
             card.className = `gladiator-card ${this.gameData.selectedGladiator === type ? 'selected' : ''}`;
             card.innerHTML = `
-                <div style="display:flex; align-items:center; min-height:200px;">
+                <div style="display:flex; align-items:center; padding:10px;">
                     <!-- BAL OLDAL - kép -->
-                    <div style="flex:0; margin-right:10px;">
+                    <div style="flex:0 0 100px; display:flex; justify-content:center;">
                         <img src="${gladiator.image}" 
                             alt="${gladiator.name}" 
                             class="gladiator-image" 
-                            style="width:200px; height:200px; object-fit:contain;">
+                            style="width:100px; height:auto; object-fit:contain;">
                     </div>
 
                     <!-- JOBB OLDAL - szöveg -->
                     <div style="
                         flex:1;
+                        margin-left:15px;
                         color:#fff;
                         text-shadow: 1px 1px 4px #000, 0 0 8px #000;
                     ">
@@ -141,6 +142,7 @@ class IdleGladiatorGame {
                     </div>
                 </div>
             `;
+
 
 
             card.addEventListener('click', () => {
