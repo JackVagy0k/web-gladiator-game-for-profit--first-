@@ -112,10 +112,16 @@ class IdleGladiatorGame {
             const card = document.createElement('div');
             card.className = `gladiator-card ${this.gameData.selectedGladiator === type ? 'selected' : ''}`;
             card.innerHTML = `
-                <div style="display:flex; align-items:center; min-height:80px;">
-                    <div style="flex:0 0 64px; margin-right:10px;"> 
-                        <img src="${gladiator.image}" alt="${gladiator.name}" class="gladiator-image" style="width:200px; height:200px;>
+                <div style="display:flex; align-items:center; min-height:200px;">
+                    <!-- BAL OLDAL - kép -->
+                    <div style="flex:0; margin-right:10px;">
+                        <img src="${gladiator.image}" 
+                            alt="${gladiator.name}" 
+                            class="gladiator-image" 
+                            style="width:200px; height:200px; object-fit:contain;">
                     </div>
+
+                    <!-- JOBB OLDAL - szöveg -->
                     <div style="
                         flex:1;
                         color:#fff;
