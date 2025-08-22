@@ -112,12 +112,10 @@ class IdleGladiatorGame {
             const card = document.createElement('div');
             card.className = `gladiator-card ${this.gameData.selectedGladiator === type ? 'selected' : ''}`;
             card.innerHTML = `
-                <div style="position:relative; min-height:80px; display:flex; align-items:center;">
+                <div style="display:flex; align-items:center; min-height:80px;">
                     <img src="${gladiator.image}" alt="${gladiator.name}" 
                         class="gladiator-image"
                         style="
-                            position:absolute;
-                            left:0; top:0; bottom:0;
                             width:80px; height:80px; 
                             object-fit:contain;
                             border-radius:8px;
@@ -126,12 +124,10 @@ class IdleGladiatorGame {
                             box-shadow:none;
                             pointer-events:none;
                             opacity:0.85;
+                            margin-right:10px;
                         ">
                     <div style="
-                        position:relative;
-                        margin-left:20px;
-                        padding-left:70px;
-                        z-index:2;
+                        flex:1;
                         color:#fff;
                         text-shadow: 1px 1px 4px #000, 0 0 8px #000;
                     ">
@@ -149,6 +145,7 @@ class IdleGladiatorGame {
                     </div>
                 </div>
             `;
+
 
             card.addEventListener('click', () => {
                 if (!owned && gladiator.cost > 0) {
