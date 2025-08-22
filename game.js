@@ -213,7 +213,7 @@ class IdleGladiatorGame {
 
             const button = item.querySelector('.upgrade-btn');
             button.addEventListener('click', () => {
-                if (canAfford) {
+                if (upgrade.canAfford) {
                     this.purchaseUpgrade(type);
                 }
             });
