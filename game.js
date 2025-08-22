@@ -20,7 +20,7 @@ class IdleGladiatorGame {
 
         this.gladiatorTypes = {
             warrior: {
-                name: "🛡️ Warrior",
+                name: "🛡️ Warriorr",
                 baseAttack: 10,
                 baseDefense: 8,
                 baseHealth: 100,
